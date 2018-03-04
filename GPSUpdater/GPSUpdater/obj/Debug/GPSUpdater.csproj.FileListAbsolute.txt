@@ -16,6 +16,7 @@ C:\Users\f16fa\Documents\Hacktech2018\GPSUpdater\GPSUpdater\obj\Debug\R.cs.flag
 C:\Users\f16fa\Documents\Hacktech2018\GPSUpdater\GPSUpdater\obj\Debug\uploadflags.txt
 C:\Users\f16fa\Documents\Hacktech2018\GPSUpdater\GPSUpdater\bin\Debug\GPSUpdater.dll.mdb
 C:\Users\f16fa\Documents\Hacktech2018\GPSUpdater\GPSUpdater\obj\Debug\android\assets\GPSUpdater.dll.mdb
+C:\Users\f16fa\Documents\Hacktech2018\GPSUpdater\GPSUpdater\obj\Debug\GPSUpdater.csprojResolveAssemblyReference.cache
 C:\Users\f16fa\Documents\Hacktech2018\GPSUpdater\GPSUpdater\bin\Debug\GPSUpdater.dll
 bin\Debug\Mono.Android.pdb
 bin\Debug\mscorlib.pdb

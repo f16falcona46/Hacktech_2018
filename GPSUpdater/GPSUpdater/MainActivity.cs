@@ -10,14 +10,13 @@ using System.Timers;
 using System;
 using System.Net;
 using System.IO;
+using HttpUtils;
 
 namespace GPSUpdater
 {
 	[Activity(Label = "GPSUpdater", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity, ILocationListener
 	{
-		int count = 1;
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -88,13 +87,13 @@ namespace GPSUpdater
 
 		private void sendGPSToServer(object sender, ElapsedEventArgs e)
 		{
-			if (this.gpsPosition != null && this.server != "") {
+			if (this.gpsPosition != null && this.server != "")
+			{
 				try
 				{
-					string url = this.server + "cgi-bin/getpage.cgi?action=updategps&lat=" + this.gpsPosition.Latitude + "&long=" + this.gpsPosition.Longitude;
-					WebRequest req = WebRequest.Create(url);
-					Stream s = req.GetResponse().GetResponseStream();
-					s.Close();
+					var client = new RestClient(endpoint: "http://" + this.server + "/cgi-bin/getpage.cgi",
+						method: HttpVerb.GET);
+					var result = client.MakeRequest("?action=updategps&lat=" + this.gpsPosition.Latitude + "&long=" + this.gpsPosition.Longitude);
 				}
 				catch (Exception)
 				{

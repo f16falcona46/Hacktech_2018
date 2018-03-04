@@ -41,6 +41,8 @@ set sock [fcgi OpenSocket :8000]
 set req [fcgi InitRequest $sock 0]
 
 while {1} {
+	puts "Got a request."
+	
 	fcgi Accept_r $req
 	#get the requested page
 	set pd [fcgi GetParam $req]
@@ -96,7 +98,9 @@ while {1} {
 				append C "No verification code was entered."
 			}
 		} elseif {[dict get $query_params "action"] eq "updategps"} {
-			puts [dict get $query_params "lat"] [dict get $query_params "long"]
+			set latitude [dict get $query_params "lat"]
+			set longitude [dict get $query_params "long"]
+			puts "Latitude: $latitude, Longitude: $longitude"
 		}
 	} else {
 		append C "null home page"

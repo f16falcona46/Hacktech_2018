@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="GPSUpdater.GPSUpdater">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.2" package="GPSUpdater.GPSUpdater" android:installLocation="auto">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="21" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-  <application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="android.app.Application" android:debuggable="true">
+  <application android:allowBackup="true" android:label="@string/app_name" android:name="android.app.Application" android:icon="@mipmap/icon" android:debuggable="true">
     <activity android:icon="@mipmap/icon" android:label="GPSUpdater" android:name="md5ac80d73f1c7a68fc73082841771c1094.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
