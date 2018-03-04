@@ -1,0 +1,19 @@
+<html>
+<head>
+<title> ADD PHONE </title>
+<style>
+body {
+    background-image:url("/open_door.jpg");
+	background-size: 125%;
+    background-repeat: no-repeat;
+}
+</style>
+</head>
+<body style="padding-top:200px;" width="100%">
+<center>
+<span style="font-size:50px; color:white;">
+<%= $SUCCESS %>
+</span>
+</center>
+</body>
+</html>

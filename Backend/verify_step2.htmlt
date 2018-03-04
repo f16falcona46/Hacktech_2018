@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> ADD PHONE </title>
+<style>
+body {
+    background-image:url("/open_door.jpg");
+	background-size: 125%;
+    background-repeat: no-repeat;
+}
+</style>
+</head>
+<body style="padding-top:200px;" width="100%">
+<center>
+<form method="get" action="/cgi-bin/getpage.cgi">
+<span style="font-size:50px; color:white;">Please enter the verification code you were sent via SMS:</span>
+<br><br>
+<input type="hidden" name="action" value="verify_step3" />
+<input type="text" maxlength="6" size="6" name="verification_code">
+<br>
+<br>
+<input type="submit" value="Verify">
+</form>
+</center>
+</body>
+</html>

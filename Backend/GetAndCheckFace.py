@@ -8,10 +8,22 @@ import wsgiref.simple_server
 import cgi
 import base64
 import subprocess
+import shutil
 from threading import Timer
+from io import BytesIO
+from PIL import Image, ImageDraw
+
+def getRectangle(faceDictionary):
+    rect = faceDictionary['faceRectangle']
+    left = rect['left']
+    top = rect['top']
+    bottom = left + rect['height']
+    right = top + rect['width']
+    return ((left, top), (bottom, right))
 
 RASPI_IP = "http://192.168.137.92:8051"
 FILENAME = "picture.jpg"
+SERVERPATH = "./website_stuff/nginx-1.13.4/html/"
 GROUP = "authorized_entry"
 
 KEY = '64ebe5b92a9a4d7e8e841a7f8a5e04ef'  # Replace with a valid subscription key (keeping the quotes in place).
@@ -27,13 +39,20 @@ def app(env, start_response):
 		start_response("200 OK", [("Content-type", "text/html; charset=utf-8")])
 		urllib.request.urlretrieve(RASPI_IP + "/" + FILENAME, FILENAME)
 		faces = cf.face.detect(FILENAME)
+		img = Image.open(FILENAME)
+		draw = ImageDraw.Draw(img)
+		for face in faces:
+			draw.rectangle(getRectangle(face), outline='red')
+		img.save(SERVERPATH + FILENAME)
+		img.close()
 		if faces:
 			result = cf.face.identify([faces[0]["faceId"]], GROUP)
 			if result[0]["candidates"]:
 				person_info = cf.person.get(GROUP, result[0]["candidates"][0]["personId"])
 				print("Hello, " + person_info["name"] + ".")
 				urllib.request.urlretrieve(RASPI_IP + "/" + "unlock")
-				cf.person.add_face(FILENAME, GROUP, result[0]["candidates"][0]["personId"])
+				if len(faces) == 1:
+					cf.person.add_face(FILENAME, GROUP, result[0]["candidates"][0]["personId"])
 				response = [('1 "%s"' % person_info["name"]).encode("utf-8")]
 				print(response)
 				lock_after_entry = Timer(5, lambda : urllib.request.urlretrieve(RASPI_IP + "/" + "lock"))

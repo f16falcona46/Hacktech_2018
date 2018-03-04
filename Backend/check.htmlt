@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> STATUS </title>
+<style>
+</style>
+</head>
+<body  style="padding-top:80px;">
+<center>
+<div>
+<p style="font-size:20px;">DOOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <% if {$UNLOCKED == 1} { %>
+	Unlocked
+	<% } else { %>
+	Locked
+	<% } %></p>
+<%= $FACESTATUS %>
+</div>
+<br>
+<br><br><br><br>
+<div>
+<img src="/picture.jpg" alt="Captured Image" width="95%">
+</div>
+</center>
+</form>
+</body>
+</html>

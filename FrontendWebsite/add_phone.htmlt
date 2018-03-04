@@ -13,7 +13,7 @@ body {
 <form method="get" action="">
 <span style="font-size:50px; color:white;">Please Enter the Code in the Mobile App</span>
 <br><br>
-<input type="text" maxlength="50" size="50" disabled>
+<input type="text" maxlength="50" size="50" disabled value="<%= $VERIFY_CODE %>">
 <br>
 <br>
 <input type="submit" value="Submit">

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> STATUS </title>
+<style>
+</style>
+</head>
+<body  style="padding-top:80px;">
+<center>
+<div>
+<p style="font-size:20px;">DOOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <% if {$UNLOCKED} { %>
+	Unlocked
+	<% } else { %>
+	Locked
+	<% } %></p>
+</div>
+<br><br><br><br>
+<div>
+<img src="/picture.jpg" alt="Captured Image">
+</div>
+</center>
+</form>
+</body>
+</html>
