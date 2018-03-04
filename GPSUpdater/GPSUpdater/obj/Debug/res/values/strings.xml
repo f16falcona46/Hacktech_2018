@@ -1,1 +1,1 @@
-<resources><string name="server_url">Server URL:</string><string name="select_server">Select Server</string><string name="location_desctext">Location:</string><string name="app_name">GPSUpdater</string></resources>
+<resources><string name="server_url">Server URL:</string><string name="select_server">Select Server</string><string name="location_desctext">Location:</string><string name="app_name">GPSUpdater</string><string name="location_output">Location output</string></resources>

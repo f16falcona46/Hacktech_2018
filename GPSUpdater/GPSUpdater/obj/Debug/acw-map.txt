@@ -1,0 +1,4 @@
+GPSUpdater.MainActivity, GPSUpdater;md5ac80d73f1c7a68fc73082841771c1094.MainActivity
+GPSUpdater.MainActivity, GPSUpdater, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ac80d73f1c7a68fc73082841771c1094.MainActivity
+GPSUpdater.MainActivity;md5ac80d73f1c7a68fc73082841771c1094.MainActivity
+gpsupdater.MainActivity;md5ac80d73f1c7a68fc73082841771c1094.MainActivity

@@ -95,6 +95,8 @@ while {1} {
 			} else {
 				append C "No verification code was entered."
 			}
+		} elseif {[dict get $query_params "action"] eq "updategps"} {
+			puts [dict get $query_params "lat"] [dict get $query_params "long"]
 		}
 	} else {
 		append C "null home page"

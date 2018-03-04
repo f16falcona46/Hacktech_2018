@@ -12,7 +12,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
+        android:id="@+id/serverUrl" />
     <Button
         android:id="@+id/selectServer"
         android:layout_width="match_parent"
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
     <TextView
-        android:text="Medium Text"
+        android:text="@string/location_output"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/locationOutput" />
 </LinearLayout>

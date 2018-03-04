@@ -44,17 +44,17 @@ namespace GPSUpdater
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int editText1 = 2131034113;
+			// aapt resource value: 0x7f050004
+			public const int locationOutput = 2131034116;
 			
 			// aapt resource value: 0x7f050002
 			public const int selectServer = 2131034114;
 			
+			// aapt resource value: 0x7f050001
+			public const int serverUrl = 2131034113;
+			
 			// aapt resource value: 0x7f050003
 			public const int textView1 = 2131034115;
-			
-			// aapt resource value: 0x7f050004
-			public const int textView2 = 2131034116;
 			
 			// aapt resource value: 0x7f050000
 			public const int textView3 = 2131034112;
@@ -109,6 +109,9 @@ namespace GPSUpdater
 			
 			// aapt resource value: 0x7f040002
 			public const int location_desctext = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int location_output = 2130968580;
 			
 			// aapt resource value: 0x7f040001
 			public const int select_server = 2130968577;

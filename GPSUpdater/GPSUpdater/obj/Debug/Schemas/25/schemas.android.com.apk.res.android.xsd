@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>3/4/2018 02:15:49</xs:documentation>
+    <xs:documentation>3/4/2018 02:24:52</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16925,7 +16925,6 @@
             <xs:enumeration value="@id/editText1" />
             <xs:enumeration value="@id/selectServer" />
             <xs:enumeration value="@id/textView1" />
-            <xs:enumeration value="@id/textView2" />
             <xs:enumeration value="@id/textView3" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
