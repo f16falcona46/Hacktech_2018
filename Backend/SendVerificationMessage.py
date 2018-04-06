@@ -6,8 +6,8 @@ import cgi
 import base64
 import subprocess
 
-account_sid = "ACa8aef683b117c2fccbb70fe045807aac"
-auth_token = "3ee396149de44599c9709a029f27abb0"
+account_sid = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+auth_token = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
 client = Client(account_sid, auth_token)
 
 def app(env, start_response):
